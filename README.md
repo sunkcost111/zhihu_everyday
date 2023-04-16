@@ -15,3 +15,5 @@ zhihu-admin
   node server.js
   或者
   pm2 start server.js 持久化管理我们的状态   基于pm2持久化管理我们的服务
+
+初始化工作 配置less 配置跨域 配置后端

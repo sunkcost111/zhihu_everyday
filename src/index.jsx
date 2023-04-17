@@ -8,6 +8,8 @@ import zhCN from 'antd-mobile/es/locales/zh-CN'
 import './index.less'
 
 import App from './App'
+import { Provider } from 'react-redux'
+import store from './store/index'
 ;(function () {
   const handleMax = function handleMax() {
     let html = document.documentElement
@@ -25,7 +27,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <>
     <ConfigProvider locale={zhCN}>
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
     </ConfigProvider>
   </>
 )

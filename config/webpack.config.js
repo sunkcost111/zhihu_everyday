@@ -152,7 +152,7 @@ module.exports = function (webpackEnv) {
                   px2rem({
                     rootValue: 75,
                     propList: ['*'],
-                  })
+                  }),
                 ]
               : [
                   'tailwindcss',
@@ -169,7 +169,7 @@ module.exports = function (webpackEnv) {
                   px2rem({
                     rootValue: 75,
                     propList: ['*'],
-                  })
+                  }),
                 ],
           },
           sourceMap: isEnvProduction ? shouldUseSourceMap : isEnvDevelopment,
@@ -428,6 +428,10 @@ module.exports = function (webpackEnv) {
                     require.resolve('babel-preset-react-app'),
                     {
                       runtime: hasJsxRuntime ? 'automatic' : 'classic',
+                      targets: {
+                        chrome: 49,
+                        ios: 10,
+                      },
                     },
                   ],
                 ],

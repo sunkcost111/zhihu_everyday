@@ -16,8 +16,11 @@ node + express
 node server.js
 或者
 pm2 start server.js 持久化管理我们的状态 基于 pm2 持久化管理我们的服务
-脚手架
-配置 less 配置跨域 配置后端 配置别名 配置移动端 rem 响应式的处理（lib-flexible , postcss-pxtorem) 配置打包优化处理
+脚手架的配置
+  ---配置 less 配置跨域 配置后端 配置别名 配置移动端 rem 响应式的处理（lib-flexible , postcss-pxtorem) 配置打包优化处理
+  ---配置打包优化
+  ---配置客户端启动的信息
+  ---配置REM响应式布局的处理
 
 lib-flexible 用来设置 rem 和 px 换算比例
 

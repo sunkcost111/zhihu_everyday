@@ -1,10 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import 'lib-flexible'
-import './index.less'
-import './assets/reset.min.css'
+//默认antd-mobile导入
+import { ConfigProvider } from 'antd-mobile'
+import zhCN from 'antd-mobile/es/locales/zh-CN'
 
-(function () {
+import './index.less'
+
+import App from './App'
+;(function () {
   const handleMax = function handleMax() {
     let html = document.documentElement
     let root = document.getElementById('root')
@@ -16,11 +20,12 @@ import './assets/reset.min.css'
     }
   }
   handleMax()
-  window.addEventListener('resize', handleMax)
 })()
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <>
-    <div className="box">珠峰培训</div>
+    <ConfigProvider locale={zhCN}>
+      <App />
+    </ConfigProvider>
   </>
 )
